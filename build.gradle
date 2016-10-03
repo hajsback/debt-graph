@@ -8,7 +8,19 @@ repositories {
 }
 
 dependencies {
+    compile project(":internal-api")
+    compile project(":common")
+
     compile 'org.scala-lang:scala-library:2.11.8'
+
+    compile 'com.typesafe.akka:akka-actor_2.11:2.4.10'
+    compile 'com.typesafe.play:play-json_2.11:2.5.4'
+
+    compile 'com.codemettle.reactivemq:reactivemq_2.11:0.5.5'
+    compile 'org.apache.activemq:activemq-client:5.13.3'
+
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'ch.qos.logback:logback-classic:1.1.7'
 }
 
 ScalaCompileOptions.metaClass.daemonServer = true
