@@ -8,9 +8,6 @@ repositories {
 }
 
 dependencies {
-    compile project(":internal-api")
-    compile project(":common")
-
     compile 'org.scala-lang:scala-library:2.11.8'
 
     compile 'com.typesafe.akka:akka-actor_2.11:2.4.10'
@@ -46,4 +43,8 @@ tasks.withType(ScalaCompile) {
         "-Ywarn-value-discard",
         "-Ywarn-unused"
     ]
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.4.1"
 }
