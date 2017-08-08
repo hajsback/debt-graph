@@ -5,9 +5,9 @@ import com.codemettle.reactivemq.ReActiveMQExtension
 import com.codemettle.reactivemq.ReActiveMQMessages.{ConnectionEstablished, ConsumeFromQueue, GetAuthenticatedConnection}
 import com.codemettle.reactivemq.model.AMQMessage
 import com.pawmot.hajsback.debtGraph.AMQConsumerActor.StartConsumption
-import com.pawmot.hajsback.internal.api.transactions.QueueNames.DEBT_GRAPH_QUEUE
 
 class AMQConsumerActor extends Actor {
+  val debtGraphQueueName = "debt_graph"
   var unmarshaller: ActorRef = _
 
   override def receive = {
@@ -17,7 +17,7 @@ class AMQConsumerActor extends Actor {
       ReActiveMQExtension(context.system).manager ! GetAuthenticatedConnection("nio://localhost:61616", "hajsback", "secr3t")
 
     case ConnectionEstablished(req, connActor) =>
-      connActor ! ConsumeFromQueue(DEBT_GRAPH_QUEUE)
+      connActor ! ConsumeFromQueue(debtGraphQueueName)
       context become liveConnection
   }
 

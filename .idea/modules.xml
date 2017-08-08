@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/debt-graph_main.iml" filepath="$PROJECT_DIR$/.idea/modules/debt-graph_main.iml" group="debt-graph" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/debt-graph_test.iml" filepath="$PROJECT_DIR$/.idea/modules/debt-graph_test.iml" group="debt-graph" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hajsback-debt-graph.iml" filepath="$PROJECT_DIR$/.idea/modules/hajsback-debt-graph.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hajsback-debt-graph_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hajsback-debt-graph_main.iml" group="debt-graph" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hajsback-debt-graph_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hajsback-debt-graph_test.iml" group="debt-graph" />
     </modules>
   </component>
 </project>
